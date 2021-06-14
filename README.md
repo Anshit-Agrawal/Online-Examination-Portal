@@ -50,4 +50,28 @@ Following are the examples of various route used:
 3) To give the test for exam -{POST}
       
         <IP>:<Port>/user/exams/:exam_id/
-   
+ 
+## Set Up
+
+1) Clone the Repository
+2) Move to the directory location 
+           
+        Run npm install
+3) Go to the browser at localhost:8000
+4) For testing the routes, you can VS code editor or PostMan
+
+## Why to use Onlin Examination Portal
+
+The portal provides all the necessary routes required to create any exam, and takes the result. This makesit easier to integrate with Client Aplication.
+
+## Limitations
+
+1) No Database is used for now( File System si used to store information) , But soon Mongodb will be used
+2) No Client side Example Application is provided, but soon React Js will be used
+3) Missing some level of Error Handling Optimisations
+4) Authentication needs to be added
+5) Some more routes need to be added
+
+## Help in accessing the Routes
+
+Testcase file is added in the Repository, from which user can take reference. The testcases provided were used in Postman to test all vaild routes. [./TestCases/TestCase]
