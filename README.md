@@ -74,4 +74,4 @@ The portal provides all the necessary routes required to create any exam, and ta
 
 ## Help in accessing the Routes
 
-Testcase file is added in the Repository, from which user can take reference. The testcases provided were used in Postman to test all vaild routes. [./TestCases/TestCase]
+Testcase file is added in the Repository, from which user can take reference. The testcases provided were used in Postman to test all vaild routes. -[ ./TestCases/TestCase ]
