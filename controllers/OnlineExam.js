@@ -214,7 +214,7 @@ export const postTestResult = (req, res) => {
         for (const question_id in questions[exam_id]) {
             if (answer_id === question_id) {
                 if (questions[exam_id][question_id]["Correct Answer"] === answers[answer_id]["Answer"]) {
-                    score = score + 1;
+                    score = score + 4;
                 }
                 else {
                     score = score - 1;
