@@ -1,0 +1,368 @@
+Exam Routes ( Admin Access only)
+###################################################################################
+1) Create Exam:
+	Route Used -> /admin/exams [POST]
+	
+	Test Case 1:
+	{
+    "examName": "NodeJs"
+	}
+	
+	Test Case 2:
+	{
+    "examName": "Pytho"
+	}
+	Test Case 3:
+	{
+    "examName": "ReactJs"
+	}
+########################################################################################
+
+
+
+
+######################################################################################
+2) Get Exam:
+	Route Used: /exams [GET]
+{	
+	{
+    "c58a2b48-570a-4605-ad7a-8287b0f25570": {
+        "examName": "NodeJs"
+    },
+    "a3d102ff-b289-4b4a-a17e-753efe15bac9": {
+        "examName": "Pytho"
+    },
+    "187976c6-beb3-496e-b6df-b04d1c542208": {
+        "examName": "ReactJs"
+    }
+}
+######################################################################################
+
+
+######################################################################################
+3) Update Exam:
+	Route Used: /admin/exams/:exam_id [PATCH]
+	
+Test Case1: Updating the Pytho to Python
+/admin/exams/a3d102ff-b289-4b4a-a17e-753efe15bac9
+{
+    "examName": "Python"
+}
+
+After Update
+{
+    "c58a2b48-570a-4605-ad7a-8287b0f25570": {
+        "examName": "NodeJs"
+    },
+    "a3d102ff-b289-4b4a-a17e-753efe15bac9": {
+        "examName": "Python"
+    },
+    "187976c6-beb3-496e-b6df-b04d1c542208": {
+        "examName": "ReactJs"
+    }
+}
+
+######################################################################################
+
+
+######################################################################################
+4) Delete Exam:
+	Route Used: /admin/exams/:exam_id [DELETE]
+
+Test Case:
+admin/exams/a3d102ff-b289-4b4a-a17e-753efe15bac9
+
+After delete
+{
+    "c58a2b48-570a-4605-ad7a-8287b0f25570": {
+        "examName": "NodeJs"
+    },
+    "187976c6-beb3-496e-b6df-b04d1c542208": {
+        "examName": "ReactJs"
+    }
+}
+
+This will delete the question for that exam as well from questions db
+
+######################################################################################
+
+
+Questions Routes( Admin Acccess only)
+######################################################################################
+
+1) Create Question:
+	Route used: /admin/questions/:exam_id
+	
+Test Case1:
+	{
+    "Question": "Which module is used to serve static resources in Node.js?",
+    "A": "static",
+    "B": "node-resource",
+    "C": "http",
+    "D": "node-static",
+    "Correct Answer": "D"
+	}
+Test Case2:
+{
+ "Question": "What is the advantage of using node.js?",
+        "A": "Great concurrency",
+        "B": "Generally fast",
+        "C": "It provides an easy way to build scalable network programs",
+        "D": "All of these",
+        "Correct Answer": "D"
+}
+Test Case4:
+{
+ "Question": "What is REPL in Node.js?",
+        "A": "Loop",
+        "B": "Print",
+        "C": "Eval",
+        "D": "All of these",
+        "Correct Answer": "D"
+}
+Test Case5:
+{
+  "Question": "How can we check the current version of NPM?",
+        "A": "npm --ver",
+        "B": "npm help",
+        "C": "npm --version",
+        "D": "None of the above",
+        "Correct Answer": "C"
+}
+Test Case6:
+{
+ "Question": "s console a global object?",
+        "A": "true",
+        "B": "false",
+        "C": "null",
+        "D": "none",
+        "Correct Answer": "B"
+}
+Test Case7:
+{
+  "Question": "Which of following are a valid form of route path?",
+        "A": "regular expressions",
+        "B": "string patterns",
+        "C": "strings",
+        "D": "All of above",
+        "Correct Answer": "D"
+}
+Test Case8:
+{
+ "Question": "Which of following are a valid form of route path?",
+        "A": "regular expressions",
+        "B": "string patterns",
+        "C": "strings",
+        "D": "All of above",
+        "Correct Answer": "D"
+}
+
+
+#########################################################################################
+2) Get Exam Questions:
+	Route Used : /admin/questions/:exam_id
+
+Exmple 
+/admin/questions/c58a2b48-570a-4605-ad7a-8287b0f25570
+
+{
+    "56786cf0-5643-4c87-b9d8-65b9ae7b3fe7": {
+        "Question": "Which module is used to serve static resources in Node.js?",
+        "A": "static",
+        "B": "node-resource",
+        "C": "http",
+        "D": "node-static",
+        "Correct Answer": "D"
+    },
+    "0db59d73-68f2-40b5-b960-11810c319c2b": {
+        "Question": "What is the advantage of using node.js?",
+        "A": "Great concurrency",
+        "B": "Generally fast",
+        "C": "It provides an easy way to build scalable network programs",
+        "D": "All of these",
+        "Correct Answer": "D"
+    },
+    "a3d23bbb-0f3a-4454-8024-0e27dcdab2b2": {
+        "Question": "What is REPL in Node.js?",
+        "A": "Loop",
+        "B": "Print",
+        "C": "Eval",
+        "D": "All of these",
+        "Correct Answer": "D"
+    },
+    "268af595-5186-477a-80de-ce49643a2db5": {
+        "Question": "How can we check the current version of NPM?",
+        "A": "npm --ver",
+        "B": "npm help",
+        "C": "npm --version",
+        "D": "None of the above",
+        "Correct Answer": "C"
+    },
+    "0625b3ae-8ced-475b-be53-3f83973a9b90": {
+        "Question": "s console a global object?",
+        "A": "true",
+        "B": "false",
+        "C": "null",
+        "D": "none",
+        "Correct Answer": "B"
+    },
+    "f7547bfa-bd7f-46a4-a4f5-c371672c85bd": {
+        "Question": "Which of following are a valid form of route path?",
+        "A": "regular expressions",
+        "B": "string patterns",
+        "C": "strings",
+        "D": "All of above",
+        "Correct Answer": "D"
+    },
+    "306b013c-3a64-4156-86ce-409f6fb293db": {
+        "Question": "Which of following are a valid form of route path?",
+        "A": "regular expressions",
+        "B": "string patterns",
+        "C": "strings",
+        "D": "All of above",
+        "Correct Answer": "D"
+    }
+}
+##############################################################################################
+
+
+####################################################################################################
+3) Delete Exam Question:
+	Route Used /admin/questions/:exam_id/:question_id [DELETE]
+	
+	Example 
+	/admin/questions/c58a2b48-570a-4605-ad7a-8287b0f25570/306b013c-3a64-4156-86ce-409f6fb293db
+######################################################################################################
+
+
+
+##############################################################################################
+4) Update Exam Question
+	Route Used /admin/questions/:exam_id/:question_id [PATCH]
+	
+	Example 
+	/admin/questions/c58a2b48-570a-4605-ad7a-8287b0f25570/0625b3ae-8ced-475b-be53-3f83973a9b90
+	
+	{
+	 "Question": "Is console a global object?",
+        "A": "True",
+        "B": "False",
+        "C": "null",
+        "D": "none of the above",
+        "Correct Answer": "B"
+		}
+###################################################################################################
+
+
+
+
+User Routes to give exams
+##########################################################################################################
+1) Get Exams
+Route Used: /exams [GET]
+{	
+	{
+    "c58a2b48-570a-4605-ad7a-8287b0f25570": {
+        "examName": "NodeJs"
+    },
+    "a3d102ff-b289-4b4a-a17e-753efe15bac9": {
+        "examName": "Pytho"
+    }
+}
+#####################################################################################################
+
+
+
+
+##########################################################################################################
+2) Get Exam Questions
+Route Used: /user/exams/:exam_id [GET]
+
+Example 
+/user/exams/c58a2b48-570a-4605-ad7a-8287b0f25570
+
+{
+    "56786cf0-5643-4c87-b9d8-65b9ae7b3fe7": {
+        "Question": "Which module is used to serve static resources in Node.js?",
+        "A": "static",
+        "B": "node-resource",
+        "C": "http",
+        "D": "node-static"
+    },
+    "0db59d73-68f2-40b5-b960-11810c319c2b": {
+        "Question": "What is the advantage of using node.js?",
+        "A": "Great concurrency",
+        "B": "Generally fast",
+        "C": "It provides an easy way to build scalable network programs",
+        "D": "All of these"
+    },
+    "a3d23bbb-0f3a-4454-8024-0e27dcdab2b2": {
+        "Question": "What is REPL in Node.js?",
+        "A": "Loop",
+        "B": "Print",
+        "C": "Eval",
+        "D": "All of these"
+    },
+    "268af595-5186-477a-80de-ce49643a2db5": {
+        "Question": "How can we check the current version of NPM?",
+        "A": "npm --ver",
+        "B": "npm help",
+        "C": "npm --version",
+        "D": "None of the above"
+    },
+    "0625b3ae-8ced-475b-be53-3f83973a9b90": {
+        "Question": "Is console a global object?",
+        "A": "True",
+        "B": "False",
+        "C": "null",
+        "D": "none of the above"
+    },
+    "f7547bfa-bd7f-46a4-a4f5-c371672c85bd": {
+        "Question": "Which of following are a valid form of route path?",
+        "A": "regular expressions",
+        "B": "string patterns",
+        "C": "strings",
+        "D": "All of above"
+    }
+}
+#########################################################################################################
+
+
+
+###########################################################################################################
+2) Give test
+Route used : /user/exams/:exam_id [POST]
+
+Example
+/user/exams/c58a2b48-570a-4605-ad7a-8287b0f25570
+
+
+
+{
+"56786cf0-5643-4c87-b9d8-65b9ae7b3fe7": {
+       "Answer": "D"
+    },
+    "0db59d73-68f2-40b5-b960-11810c319c2b": {
+        "Answer" : "D"
+    },
+    "a3d23bbb-0f3a-4454-8024-0e27dcdab2b2": {
+      "Answer" : "D"
+    },
+    "268af595-5186-477a-80de-ce49643a2db5": {
+       "Answer" : "A"
+    },
+    "0625b3ae-8ced-475b-be53-3f83973a9b90": {
+      "Answer" : "A"
+    },
+    "f7547bfa-bd7f-46a4-a4f5-c371672c85bd": {
+       "Answer": "D"
+    }
+}
+
+
+Score=  2
+
+############################################################################################################
+
+
+	
